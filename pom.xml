@@ -8,11 +8,11 @@
 		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.nahwantech</groupId>
+	<groupId>com.djong.gatewayt</groupId>
 	<artifactId>djong-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>djongjawa.gateway</name>
-	<description>This is apigateway from nahwan tech</description>
+	<name>djong.gateway</name>
+	<description>This is apigateway djongjawa tech</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -46,6 +46,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+		</dependency>
+
+		<!-- OAuth2 Client -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-oauth2-client</artifactId>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
