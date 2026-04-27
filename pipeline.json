@@ -1,0 +1,12 @@
+{
+  "appName": "djong-gateway",
+  "sonarExcludePath": ".mvn/**/*,target/**/*",
+  "is_unit_test": "no",
+  "language": "java",
+  "testPackages": "",
+  "sonarCoverageInclusions": "**/*.java",
+  "sonarTestInclusions": "**/*Test.java",
+  "enableSCA": "true",
+  "enableSCAHardGate": "false",
+  "needEnvFile": "yes"
+}
