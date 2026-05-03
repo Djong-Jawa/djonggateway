@@ -43,5 +43,6 @@ COPY --from=builder --chmod=755 /app/target/djong-gateway /djong-gateway
 
 # Tell the dynamic linker where to find the extra library
 ENV LD_LIBRARY_PATH=/usr/local/lib
+USER nonroot
 EXPOSE 9018
 ENTRYPOINT ["/djong-gateway"]
