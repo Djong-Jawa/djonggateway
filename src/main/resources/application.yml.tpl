@@ -1,3 +1,7 @@
+server:
+  port: {{SERVER_PORT:8080}}
+  shutdown: graceful
+
 spring:
   security:
     oauth2:
@@ -14,6 +18,15 @@ spring:
             - Path=${GRAPHQL_BACKEND_PREDICATES:/api/v1/graphql/query}
           filters:
             - RewritePath=${GRAPHQL_BACKEND_PREDICATES:/api/v1/graphql/query}, ${GRAPHQL_BACKEND_REWRITES:/v1.0.0/query}
+            - AddResponseHeader=X-Powered-By,
+            - TokenRelay
+
+        - id: sadewa-portfolio-svc
+          uri: ${GRAPHQL_SADEWA_PORTFOLIO_SVC_URI:https://djongjawa.com}
+          predicates:
+            - Path=${GRAPHQL_SADEWA_PORTFOLIO_SVC_PREDICATES:/api/v0/graphql/query}
+          filters:
+            - RewritePath=${GRAPHQL_SADEWA_PORTFOLIO_SVC_PREDICATES:/api/v0/graphql/query}, ${GRAPHQL_SADEWA_PORTFOLIO_SVC_REWRITES:/query}
             - AddResponseHeader=X-Powered-By, Djong Gateway Service
             - TokenRelay
 
