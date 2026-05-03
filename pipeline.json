@@ -1,6 +1,6 @@
 {
   "appName": "djong-gateway",
-  "sonarExcludePath": ".mvn/**/*,target/**/*",
+  "sonarExcludePath": ".mvn/**/*,target/**/*,src/*",
   "is_unit_test": "no",
   "language": "java",
   "testPackages": "",
