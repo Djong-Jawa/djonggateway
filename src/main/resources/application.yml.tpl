@@ -12,13 +12,13 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: graphql-backend
+        - id: djong-reader-engine
           uri: ${GRAPHQL_BACKEND_URI:https://djongjawa.com}
           predicates:
             - Path=${GRAPHQL_BACKEND_PREDICATES:/api/v1/graphql/query}
           filters:
             - RewritePath=${GRAPHQL_BACKEND_PREDICATES:/api/v1/graphql/query}, ${GRAPHQL_BACKEND_REWRITES:/v1.0.0/query}
-            - AddResponseHeader=X-Powered-By,
+            - AddResponseHeader=X-Powered-By, Djong Reader Engine
             - TokenRelay
 
         - id: sadewa-portfolio-svc
@@ -27,7 +27,16 @@ spring:
             - Path=${GRAPHQL_SADEWA_PORTFOLIO_SVC_PREDICATES:/api/v0/graphql/query}
           filters:
             - RewritePath=${GRAPHQL_SADEWA_PORTFOLIO_SVC_PREDICATES:/api/v0/graphql/query}, ${GRAPHQL_SADEWA_PORTFOLIO_SVC_REWRITES:/query}
-            - AddResponseHeader=X-Powered-By, Djong Gateway Service
+            - AddResponseHeader=X-Powered-By, Sedewa Portfolio Service
+            - TokenRelay
+
+        - id: server-auth
+          uri: ${SERVER_AUTH_URI:http:://localhost:9018}
+          predicates:
+            - Path=${SERVER_AUTH_PREDICATES:/api/v1/auth}
+          filters:
+            - RewritePath=${SERVER_AUTH_PREDICATES:/api/v1/auth}, ${SERVER_AUTH_REWRITES:/}
+            - AddResponseHeader=X-Powered-By, Server Auth
             - TokenRelay
 
 logging:
