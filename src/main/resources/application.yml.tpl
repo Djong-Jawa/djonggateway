@@ -1,5 +1,5 @@
 server:
-  port: {{SERVER_PORT:8080}}
+  port: {{SERVER_PORT}}
   shutdown: graceful
 
 spring:
@@ -7,35 +7,35 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: ${JWT_JWK_SET_URI:http://localhost:9018/.well-known/jwks.json}
-          secret: ${JWT_SECRET:LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2QUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktZd2dnU2lBZ0VBQW9JQkFRQzRERFl1Yk5RVWpCVjYKOGI1UzgwRUxkaFVNVGljcTBCcnp3cFhJUTVTeWdreHk5ZkZONkIxMEo2OEFsTk5hV2Z3Z2dDdW9ZV1cyUFY0cwpqZTNXMkgxZ0dRcmYwS0NpeTdzWXpqaFIrSVV5WGdXdTFhd2JkQWgxUDlLc1NBeFdURnZzT0ZFZ29hZkJsZHlCCjhBdUN3N1FlTDlPVlJFVEhmb1R5MWF5akVqSVY5L2NneHZMdDJ4d2NualAvblYzMU9aTjBITWhja3NWRGFudGwKWDJJNGdUbFIydDhQZzYzS3BlSWNLckFBZUtjLzRmOGQ5cUlscUJZTCtIMnNEUC9wZGVIeUZPaTR5SmRuTytUWQo0RXJhSWxXUndaT0toWXJROUFac0prUGVyZnlnKzFZeXYrZFBWWDdQUmM0Y05mYVZka0RleGJFdjBCSHBoZ0d4CjVEenRlUUJGQWdNQkFBRUNnZ0VBRUprMVY3bUQ1UGgvUlcvQTZPMDhUQUxSd2lMWVFIRzFSSStqZjRTc3grNmQKWTI3UDNPVldwcStmaGs5bHdrdkVROUFiWDl1czF5TXd0NWJ6UU1HVWlSS3BHdWRQWFc4L1IrenRRbU5GNi9WegowTUUvZk5oWm5PMXRIQkdCWDFVU296cXZBbURoNXNFVHVucENKNEJyNFo4UmwzQXBQYzZvd2RmSWNvcUZEdHIvCkpVSGZOK2U3c1ZJTVNNWnZUV2o5dGpkL0UzbmYzSWllQ0pveHEzYTVRanQvcStpMTl0OERSYlpjeDBOOWE0Ti8KL3k2cWp6SUVzcDZrWTFYTlZJVEU5OXZmaG1CaCtuSjhqdXhPQjJobXRPK0pBVW9JOWlGZVU4Y09haEdnc2xCZQpMUE11b2xtSFBQcVF3Tm05bVc4WVZmb3VCOHd1OWZqSy9CcEE1REhzZ1FLQmdRRDN4V21KM0JkNVFDUk9WRll0CnhVZnBuOHpyZ28wTnR0am0yNkRRUlFXWUxGQmcyMXBNTHp1TnA2WXZNTzVKY0lMMTJ1UTVPTWFycjREbmloSDIKcWtWcDdDZDhVUmMySVk1ZmZHcmJMdUNHbnFpSHdPYVdPSlVOMzRWS3lqbjhuczBWaDRIVkg2MDdGQ0NSb2VVbgpzaVFMbkZlRk1POXJnb2xHMWdhYjBrKzNRUUtCZ1FDK0tRTlh0ZXZ2T0NNZGttS3F0RUJ4cWxVNGhqYmN3anZ0CkpYeTVFOHlCbzNZdTk1SjhNcFBzOHhmZ0RNdDFJa0R1OFExYWZJdXBMaXc0MFAvTEdjNWR0SUdmZ05jR2FNNVUKZ2lBR2lpdE5iZzFnTmpSSmRaa2tTZlF3cXBoT2FEa0VLenpnVlBGSk8wQmNrNENWaytDTE1GaTdVWWZaQWFydgppQnczYk50c0JRS0JnQWJIVnVEWHJhaTZrWU8zR1BoOW1qOFJDU2swVkNtWTVBeEUyL3gydHZWMzJPY2RlVFgyCllObTZTWGluRFEzalR5SHMwQ3VrbXdMZGRWaGdWYWQ2OXhVenljekQ1eStxOFZzNWF5Nzk5RlNhaUovV0xqalQKNlhnTXNuZmVXb0hIMG5LUlY0TCtMOTRhNmQweUliUFpVdFVpZk41Ky9UM2l2MkM1d0VxSkVYZEJBb0dBSmg0dwpobGQ0T05hbTYxbVpuNkJNUHJ5bklwSjgwdG00aTN2MU9XQkhvVUQwQXN3cnQrdW5qVnJaVVZjZlBaYWxMNEJ3CmJkQURhdUZQaWdBVEZsSlE5S1duU2lMWWQzZHd6SzNjMzVLNHhXZW5GTDhvMGdUWnN0V0VObkVyNEtPeHNpMDgKb2JkRk9xbSs2QS9GT2JhUHp6YmN3b2ZBVkhhcUhpUEpqQzZzK1VVQ2dZQU5PQ2s5WGVlL2xCbFhwWXllcklSdQpQT0NrOVpETzN3WHphNUFjU0VudjMybHlBSkRwNlNJUmxnUGRRYXVQMS9vZGpHNGtLMGNUVjVoRWxKd28ycGRkClFQOGhORGJkSnRIOVgrbTZNZUN2WjU5WGl4b081WFp3ZXZ1TUZWNHVrMDk3QXZudmtqSjgxcVpGOUM3eUhweEUKS0lCbGVVMlU3SVN4bjR0d2R4MXpNdz09LS0tLS1FTkQgUFJJVkFURSBLRVktLS0tLQo=}
+          jwk-set-uri: ${JWT_JWK_SET_URI}
+          secret: ${JWT_SECRET}
   cloud:
     gateway:
       routes:
         - id: djong-reader-engine
-          uri: ${GRAPHQL_BACKEND_URI:https://djongjawa.com}
+          uri: ${GRAPHQL_BACKEND_URI}
           predicates:
-            - Path=${GRAPHQL_BACKEND_PREDICATES:/api/v1/graphql/query}
+            - Path=${GRAPHQL_BACKEND_PREDICATES}
           filters:
-            - RewritePath=${GRAPHQL_BACKEND_PREDICATES:/api/v1/graphql/query}, ${GRAPHQL_BACKEND_REWRITES:/v1.0.0/query}
+            - RewritePath=${GRAPHQL_BACKEND_PREDICATES}, ${GRAPHQL_BACKEND_REWRITES}
             - AddResponseHeader=X-Powered-By, Djong Reader Engine
             - TokenRelay
 
         - id: sadewa-portfolio-svc
-          uri: ${GRAPHQL_SADEWA_PORTFOLIO_SVC_URI:https://djongjawa.com}
+          uri: ${GRAPHQL_SADEWA_PORTFOLIO_SVC_URI}
           predicates:
-            - Path=${GRAPHQL_SADEWA_PORTFOLIO_SVC_PREDICATES:/api/v0/graphql/query}
+            - Path=${GRAPHQL_SADEWA_PORTFOLIO_SVC_PREDICATES}
           filters:
-            - RewritePath=${GRAPHQL_SADEWA_PORTFOLIO_SVC_PREDICATES:/api/v0/graphql/query}, ${GRAPHQL_SADEWA_PORTFOLIO_SVC_REWRITES:/query}
+            - RewritePath=${GRAPHQL_SADEWA_PORTFOLIO_SVC_PREDICATES}, ${GRAPHQL_SADEWA_PORTFOLIO_SVC_REWRITES}
             - AddResponseHeader=X-Powered-By, Sedewa Portfolio Service
             - TokenRelay
 
         - id: server-auth
-          uri: ${SERVER_AUTH_URI:http:://localhost:9018}
+          uri: ${SERVER_AUTH_URI}
           predicates:
-            - Path=${SERVER_AUTH_PREDICATES:/api/v1/auth}
+            - Path=${SERVER_AUTH_PREDICATES}
           filters:
-            - RewritePath=${SERVER_AUTH_PREDICATES:/api/v1/auth}, ${SERVER_AUTH_REWRITES:/}
+            - RewritePath=${SERVER_AUTH_PREDICATES}, ${SERVER_AUTH_REWRITES}
             - AddResponseHeader=X-Powered-By, Server Auth
             - TokenRelay
 
