@@ -8,3 +8,4 @@ All API Gateway for handling requests and responses between clients and microser
 
 ## Configuration
 The application can be configured using the `application.properties` file located in the `src/main/resources
+` directory. You can set the server port, database connection, and other properties as needed.
