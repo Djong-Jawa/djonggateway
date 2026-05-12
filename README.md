@@ -7,5 +7,8 @@ All API Gateway for handling requests and responses between clients and microser
 3. Run the application using the command line or your preferred IDE.
 
 ## Configuration
-The application can be configured using the `application.properties` file located in the `src/main/resources
-` directory. You can set the server port, database connection, and other properties as needed.
+The application can be configured using the `application.properties` file located in the `src/main/resources directory. You can set the server port, database connection, and other properties as needed.`
+
+## Usage
+Once the application is running, you can access the API Gateway at `http://localhost:8080`. 
+You can send requests to the API Gateway, and it will route them to the appropriate microservices based on the defined routes.
