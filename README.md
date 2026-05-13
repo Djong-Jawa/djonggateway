@@ -12,3 +12,7 @@ The application can be configured using the `application.properties` file locate
 ## Usage
 Once the application is running, you can access the API Gateway at `http://localhost:8080`. 
 You can send requests to the API Gateway, and it will route them to the appropriate microservices based on the defined routes.
+
+## Contributing
+If you would like to contribute to this project, please fork the repository and create a pull request with your changes. Make sure to follow the coding standards and include tests for your changes.
+
