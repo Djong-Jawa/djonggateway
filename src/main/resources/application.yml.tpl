@@ -35,7 +35,7 @@ spring:
           predicates:
             - Path={{SERVER_AUTH_PREDICATES}}
           filters:
-            - RewritePath={{SERVER_AUTH_PREDICATES}}, {{SERVER_AUTH_REWRITES}}
+            - RewritePath=/auth/(?<segment>.*), /$\{segment}
             - AddResponseHeader=X-Powered-By, Server Auth
             - TokenRelay
 
