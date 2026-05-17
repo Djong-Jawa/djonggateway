@@ -39,6 +39,15 @@ spring:
             - AddResponseHeader=X-Powered-By, Server Auth
             - TokenRelay
 
+        - id: djong-reader-engine-rest
+          uri: {{DJONGREADER_BACKEND_URI}}
+          predicates:
+            - Path={{DJONGREADER_BACKEND_PREDICATES}}
+          filters:
+            - RewritePath=/api/v1/djongreader/(?<segment>.*), /api/$\{segment}
+            - AddResponseHeader=X-Powered-By, Djong Reader Engine Rest Api
+            - TokenRelay
+
 logging:
   level:
     org.springframework.security: DEBUG
